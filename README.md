@@ -94,29 +94,26 @@ regenerate them). Numbers shown are the fresh-demo baseline.
 
 ```mermaid
 flowchart LR
-    subgraph AC["On the aircraft — edge node (port 8000)"]
-      S[30-cycle sensor window<br/>21 sensors + 3 op settings] --> R[Frozen Ridge RUL model<br/>MinMaxScaler → flatten → Ridge → clip 0..125]
-      R --> C[Cross-conformal sidecar<br/>90% interval, half-width 27.19 cycles]
-      C --> P["POST /predict → health report JSON<br/>rul_cycles, engine_health, risk,<br/>interval, top_issues, recommended_action"]
+    subgraph EDGE["On the aircraft — edge node, port 8000"]
+        S[30-cycle sensor window<br/>21 sensors + 3 op settings] --> R[Frozen Ridge RUL model<br/>scale, flatten, predict, clip to 125]
+        R --> C[Cross-conformal sidecar<br/>90 percent interval, half-width 27.19 cycles]
+        C --> P[POST /predict<br/>RUL, health, risk band,<br/>interval, top issues, action]
     end
 
-    P -->|"Bearer edge-ac###-dev-token<br/>device may only report its own aircraft"| I
-
-    subgraph BASE["At the base — ground station (port 8001)"]
-      I["POST /ingest_report"] --> DB[(SQLite ground/fleet.db<br/>aircraft, health_reports,<br/>alerts, plans, audit_logs)]
-      DB --> AL[Alert lifecycle<br/>ACTIVE → ACKNOWLEDGED → CLEARED]
-      DB --> SCH["POST /schedule<br/>Google OR-Tools CP-SAT<br/>30-day horizon · 8 tasks/day · deadlines floor(RUL×0.8)"]
-      SCH --> PL[Plan: SCHEDULED day + reason,<br/>or DEFERRED + reason]
-      DB --> API["Read API (JWT RBAC)<br/>GET /fleet · /fleet/{id} · /models<br/>/alerts · /schedule/latest · /health"]
+    subgraph BASE["At the base — ground station, port 8001"]
+        I[POST /ingest_report<br/>device token, own aircraft only] --> DB[(SQLite ground/fleet.db<br/>aircraft, reports,<br/>alerts, plans, audit logs)]
+        DB --> AL[Alert lifecycle<br/>ACTIVE, ACKNOWLEDGED, CLEARED]
+        DB --> SCH[POST /schedule — CP-SAT<br/>30-day horizon, 8 tasks per day,<br/>deadline floor of 0.8 x RUL]
+        SCH --> PL[Plan output<br/>SCHEDULED day plus reason,<br/>or DEFERRED plus reason]
+        DB --> API[Read API behind JWT RBAC<br/>/fleet, /models, /alerts,<br/>/schedule/latest, /health]
     end
 
-    API -->|"Bearer JWT: maintainer / commander / admin"| DASH
-
-    subgraph USER["Operator"]
-      DASH["Streamlit dashboard (port 8501)<br/>Fleet Readiness · Aircraft Models ·<br/>Aircraft Detail · Maintenance Plan · About"]
-      DASH --> Q["Fleet Availability KPI, grounded list,<br/>type profiles, Gantt plan, deferral reasons"]
+    subgraph OPS["Operator — Streamlit dashboard, port 8501"]
+        DASH[Five sections<br/>Fleet Readiness, Aircraft Models,<br/>Aircraft Detail, Maintenance Plan, About] --> Q[Fleet Availability KPI, grounded list,<br/>type profiles, Gantt plan, deferral reasons]
     end
 
+    P -->|signed health report| I
+    API -->|commander or maintainer JWT| DASH
     PL --> API
     AL --> DASH
 ```
@@ -126,11 +123,10 @@ report → SQLite → (alerts, CP-SAT plan, read API) → dashboard.
 
 **Failure isolation is deliberate.** The edge node holds only frozen
 inference artifacts (~6 KB of pickles plus a sample window) and never needs
-the ground; the ground
-never calls the edge; the dashboard degrades to a captured snapshot
-(DEMO MODE) when the ground is unreachable. A crashed aircraft node cannot
-corrupt base data — it can only fail to report, which the ground surfaces as
-"no telemetry" rather than guessing.
+the ground; the ground never calls the edge; the dashboard degrades to a
+captured snapshot (DEMO MODE) when the ground is unreachable. A crashed
+aircraft node cannot corrupt base data — it can only fail to report, which
+the ground surfaces as "no telemetry" rather than guessing.
 
 ### The three services
 
