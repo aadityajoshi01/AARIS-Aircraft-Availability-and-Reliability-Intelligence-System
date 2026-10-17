@@ -44,8 +44,8 @@ sections, in `web/`.
 
 It is deliberately *not* the application. Vercel cannot keep a Streamlit
 process or a writable SQLite file alive, so the site renders one frozen
-snapshot (`web/data.json`, a byte copy of `dashboard/demo_data.json` captured
-read-only from the running station on 17 Oct 2026) and recomputes every number
+snapshot (`web/data.json`, a straight copy of `dashboard/demo_data.json` as
+captured read-only from the running station on 17 Oct 2026) and recomputes every number
 in the browser with the same logic as `dashboard/app.py` — readiness per plan
 day, risk bands, the conformal intervals, the CP-SAT plan summary. There is no
 backend behind the URL, no login, and nothing can be acknowledged or
@@ -53,8 +53,17 @@ scheduled; the page labels itself `DEMO SNAPSHOT` and repeats the synthetic-data
 notice. Use it to see the information design; use `start.bat` (below) to run
 the real thing.
 
-Redeploy after a new snapshot: copy `dashboard/demo_data.json` to
-`web/data.json`, then `vercel deploy --prod --yes` from `web/`.
+Redeploy: the Vercel project `aaris` is connected to this repository with root
+directory `web`, so pushing to `main` builds a new production deployment
+automatically (`aaris-alpha.vercel.app` always tracks it). `aaris.vercel.app` is
+a manual alias and must be re-pointed at the new deployment:
+
+```bat
+vercel alias set <deployment-url-from-the-push> aaris.vercel.app
+```
+
+To refresh the figures themselves, re-capture `dashboard/demo_data.json` from
+the running station, copy it to `web/data.json`, and commit.
 
 ---
 
