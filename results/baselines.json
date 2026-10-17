@@ -1,0 +1,42 @@
+{
+  "constant_mean": {
+    "rmse": 41.88749975603209,
+    "mae": 36.14175827026367,
+    "nasa_score": 7390.9718719764605,
+    "overestimation_rate": 0.45,
+    "mean_error": 5.262417297363282,
+    "std_error": 41.555620558475596,
+    "max_overestimation": 73.78241729736328,
+    "max_underestimation": -64.21758270263672
+  },
+  "constant_asym_opt_38": {
+    "rmse": 55.98767721561594,
+    "mae": 47.76,
+    "nasa_score": 257837.66360888322,
+    "overestimation_rate": 0.27,
+    "mean_error": -37.52,
+    "std_error": 41.5556205584756,
+    "max_overestimation": 31.0,
+    "max_underestimation": -107.0
+  },
+  "ridge_flattened_window": {
+    "rmse": 16.222443206071603,
+    "mae": 13.21045207977295,
+    "nasa_score": 443.9185791015625,
+    "overestimation_rate": 0.54,
+    "mean_error": 1.1707374036312104,
+    "std_error": 16.180143466377984,
+    "max_overestimation": 41.180503845214844,
+    "max_underestimation": -42.468353271484375
+  },
+  "lstm_1layer_h64_30ep": {
+    "rmse": 17.651487535248446,
+    "mae": 12.535225868225098,
+    "nasa_score": 972.6781005859375,
+    "overestimation_rate": 0.29,
+    "mean_error": -8.482962820529938,
+    "std_error": 15.47948177237,
+    "max_overestimation": 27.858314514160156,
+    "max_underestimation": -55.79883575439453
+  }
+}

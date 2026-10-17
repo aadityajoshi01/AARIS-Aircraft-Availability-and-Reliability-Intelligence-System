@@ -1,0 +1,6 @@
+preprocessed train df: 20631 rows, 100 engines (0s)
+[done] sensors seed42: best val RMSE 12.84 (last-5 mean 14.74) in 1611s
+[done] sensors seed43: best val RMSE 16.37 (last-5 mean 20.78) in 540s
+[done] sensors seed44: best val RMSE 15.27 (last-5 mean 16.09) in 460s
+
+=== ran 3 run(s); 12/12 val_result.json present ===

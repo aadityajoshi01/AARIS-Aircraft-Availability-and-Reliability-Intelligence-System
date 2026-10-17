@@ -1,0 +1,38 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║     NASA C-MAPSS Transformer-Based RUL Prediction            ║
+║     Remaining Useful Life Prediction for Jet Engines         ║
+╚══════════════════════════════════════════════════════════════╝
+    
+Device: cpu
+Dataset: FD001
+Output directory: C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\outputs
+Loading model from checkpoint...
+Loaded model from epoch 48
+Preparing test data...
+Test engines: 100
+
+==================================================
+TEST SET EVALUATION RESULTS
+==================================================
+  RMSE:                  18.76 cycles
+  MAE:                   13.50 cycles
+  NASA Score:            543.96
+  Overestimation Rate:   37.0%
+--------------------------------------------------
+  Mean Error:            -4.58
+  Std Error:             18.19
+  Max Overestimation:    35.57
+  Max Underestimation:   -52.29
+==================================================
+
+Predictions saved to: C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\outputs\predictions.csv
+
+Prediction Summary:
+  Total engines evaluated: 100
+  Urgent attention needed: 24
+  Overestimated count: 37
+
+============================================================
+COMPLETE!
+============================================================

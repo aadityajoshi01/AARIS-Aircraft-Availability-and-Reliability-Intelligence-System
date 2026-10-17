@@ -1,0 +1,22 @@
+{
+  "constant_mean": {
+    "rmse": 41.89,
+    "mae": 36.14,
+    "nasa_score": 7391.0
+  },
+  "constant_asym_opt_38": {
+    "rmse": 55.99,
+    "mae": 47.76,
+    "nasa_score": 257837.7
+  },
+  "ridge_flattened_window": {
+    "rmse": 16.22,
+    "mae": 13.21,
+    "nasa_score": 443.9
+  },
+  "lstm_1layer_h64_30ep": {
+    "rmse": 17.65,
+    "mae": 12.54,
+    "nasa_score": 972.7
+  }
+}

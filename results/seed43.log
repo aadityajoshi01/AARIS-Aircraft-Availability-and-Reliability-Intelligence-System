@@ -1,0 +1,17 @@
+Loaded best model from epoch 50
+{
+  "seed": 43,
+  "epochs": 50,
+  "best_val_loss": 0.0045441667607519776,
+  "best_epoch": 50,
+  "test": {
+    "rmse": 19.211285389794327,
+    "mae": 14.693280220031738,
+    "nasa_score": 819.4228515625,
+    "overestimation_rate": 0.42,
+    "mean_error": -1.0707226204872131,
+    "std_error": 19.181424291536626,
+    "max_overestimation": 50.57037353515625,
+    "max_underestimation": -51.91981506347656
+  }
+}

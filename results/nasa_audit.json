@@ -1,0 +1,44 @@
+{
+  "constant_mean": {
+    "rmse": 41.89,
+    "overest_rate": 0.45,
+    "repo_nasa_as_implemented": 7391.0,
+    "nasa_standard_correct": 19054.4
+  },
+  "constant_38": {
+    "rmse": 55.99,
+    "overest_rate": 0.27,
+    "repo_nasa_as_implemented": 257837.7,
+    "nasa_standard_correct": 30201.2
+  },
+  "ridge": {
+    "rmse": 16.22,
+    "overest_rate": 0.54,
+    "repo_nasa_as_implemented": 443.9,
+    "nasa_standard_correct": 413.3
+  },
+  "lstm": {
+    "rmse": 17.68,
+    "overest_rate": 0.29,
+    "repo_nasa_as_implemented": 979.4,
+    "nasa_standard_correct": 425.1
+  },
+  "transformer_seed42": {
+    "rmse": 18.76,
+    "overest_rate": 0.37,
+    "repo_nasa_as_implemented": 1129.6,
+    "nasa_standard_correct": 544.0
+  },
+  "transformer_seed43": {
+    "rmse": 19.21,
+    "overest_rate": 0.42,
+    "repo_nasa_as_implemented": 819.4,
+    "nasa_standard_correct": 799.8
+  },
+  "transformer_seed44": {
+    "rmse": 17.42,
+    "overest_rate": 0.34,
+    "repo_nasa_as_implemented": 621.6,
+    "nasa_standard_correct": 608.1
+  }
+}

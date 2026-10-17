@@ -1,0 +1,25 @@
+{
+  "42": {
+    "uncapped_rmse": 18.76,
+    "capped_rmse": 17.0,
+    "capped_mae": 12.43,
+    "nasa_capped": 707.9
+  },
+  "43": {
+    "uncapped_rmse": 19.21,
+    "capped_rmse": 18.06,
+    "capped_mae": 13.62,
+    "nasa_capped": 660.9
+  },
+  "44": {
+    "uncapped_rmse": 17.42,
+    "capped_rmse": 16.0,
+    "capped_mae": 11.87,
+    "nasa_capped": 487.4
+  },
+  "ridge": {
+    "ridge_uncapped_truth": 16.22,
+    "ridge_capped_truth": 14.88,
+    "mae_capped": 12.14
+  }
+}

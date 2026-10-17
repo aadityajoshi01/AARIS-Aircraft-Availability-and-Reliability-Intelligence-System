@@ -1,0 +1,43 @@
+C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\experiments\engine_split.py:25: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  .venv\Scripts\python.exe experiments/engine_split.py --runs control:42,no_pe:42
+preprocessed train df: 20631 rows, 100 engines (1s)
+[done] control seed44: best val RMSE 13.63 (last-5 mean 17.26) in 1299s
+[done] no_pe seed44: best val RMSE 21.17 (last-5 mean 22.31) in 737s
+[done] seq50 seed44: best val RMSE 11.46 (last-5 mean 12.24) in 1376s
+Traceback (most recent call last):
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\experiments\engine_split.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\experiments\engine_split.py", line 211, in main
+    r = run_one(variant, seed, train_df_full)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\experiments\engine_split.py", line 135, in run_one
+    trainer.train(train_loader, val_loader, epochs=epochs, verbose=False)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\src\train.py", line 301, in train
+    train_loss = self.train_epoch(train_loader)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\src\train.py", line 177, in train_epoch
+    predictions, _ = self.model(X_batch)
+                     ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\src\models\transformer.py", line 185, in forward
+    x = self.input_projection(x)  # [B, T, d_model]
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\.venv\Lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1920x18 and 24x128)

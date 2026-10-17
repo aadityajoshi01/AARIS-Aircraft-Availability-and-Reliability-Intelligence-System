@@ -1,0 +1,102 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║     NASA C-MAPSS Transformer-Based RUL Prediction            ║
+║     Remaining Useful Life Prediction for Jet Engines         ║
+╚══════════════════════════════════════════════════════════════╝
+    
+Device: cpu
+Dataset: FD001
+Output directory: C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\outputs
+
+============================================================
+TRAINING PHASE
+============================================================
+============================================================
+NASA C-MAPSS Transformer RUL Prediction
+============================================================
+
+[1/4] Loading and preprocessing data...
+      Engines: 100
+      Total records: 20631
+      Avg cycles/engine: 206.3
+
+[2/4] Creating training sequences...
+      Sequences: 17731
+      Shape: (17731, 30, 24)
+
+[3/4] Creating data loaders...
+      Train batches: 222
+      Val batches: 56
+
+[4/4] Initializing model...
+      Total parameters: 541,697
+
+============================================================
+Training Transformer RUL Predictor
+Device: cpu
+Epochs: 50
+Early Stopping Patience: 15
+============================================================
+
+Epoch   1/50 | Train Loss: 0.1294 | Val Loss: 0.0503 | RMSE: 20.48 | Over-Rate: 34.09% | LR: 1.00e-03 *
+Epoch   2/50 | Train Loss: 0.0600 | Val Loss: 0.0354 | RMSE: 18.86 | Over-Rate: 21.51% | LR: 1.00e-03 *
+Epoch   3/50 | Train Loss: 0.0552 | Val Loss: 0.0366 | RMSE: 22.01 | Over-Rate: 13.62% | LR: 1.00e-03
+Epoch   4/50 | Train Loss: 0.0478 | Val Loss: 0.0390 | RMSE: 16.77 | Over-Rate: 29.29% | LR: 1.00e-03
+Epoch   5/50 | Train Loss: 0.0464 | Val Loss: 0.0313 | RMSE: 18.30 | Over-Rate: 17.37% | LR: 1.00e-03 *
+Epoch   6/50 | Train Loss: 0.0443 | Val Loss: 0.0326 | RMSE: 19.91 | Over-Rate: 11.76% | LR: 1.00e-03
+Epoch   7/50 | Train Loss: 0.0424 | Val Loss: 0.0403 | RMSE: 24.12 | Over-Rate: 7.50% | LR: 1.00e-03
+Epoch   8/50 | Train Loss: 0.0421 | Val Loss: 0.0320 | RMSE: 15.80 | Over-Rate: 22.86% | LR: 1.00e-03
+Epoch   9/50 | Train Loss: 0.0386 | Val Loss: 0.0308 | RMSE: 20.49 | Over-Rate: 10.77% | LR: 1.00e-03 *
+Epoch  10/50 | Train Loss: 0.0379 | Val Loss: 0.0286 | RMSE: 15.58 | Over-Rate: 16.72% | LR: 1.00e-03 *
+Epoch  11/50 | Train Loss: 0.0373 | Val Loss: 0.0457 | RMSE: 12.32 | Over-Rate: 38.68% | LR: 1.00e-03
+Epoch  12/50 | Train Loss: 0.0364 | Val Loss: 0.0270 | RMSE: 18.49 | Over-Rate: 10.09% | LR: 1.00e-03 *
+Epoch  13/50 | Train Loss: 0.0377 | Val Loss: 0.0294 | RMSE: 20.55 | Over-Rate: 6.88% | LR: 1.00e-03
+Epoch  14/50 | Train Loss: 0.0341 | Val Loss: 0.0261 | RMSE: 18.72 | Over-Rate: 10.06% | LR: 1.00e-03 *
+Epoch  15/50 | Train Loss: 0.0327 | Val Loss: 0.0255 | RMSE: 16.45 | Over-Rate: 12.26% | LR: 1.00e-03 *
+Epoch  16/50 | Train Loss: 0.0337 | Val Loss: 0.0251 | RMSE: 14.15 | Over-Rate: 18.44% | LR: 1.00e-03 *
+Epoch  17/50 | Train Loss: 0.0310 | Val Loss: 0.0297 | RMSE: 11.76 | Over-Rate: 32.11% | LR: 1.00e-03
+Epoch  18/50 | Train Loss: 0.0320 | Val Loss: 0.0269 | RMSE: 12.14 | Over-Rate: 25.54% | LR: 1.00e-03
+Epoch  19/50 | Train Loss: 0.0302 | Val Loss: 0.0376 | RMSE: 10.93 | Over-Rate: 33.61% | LR: 1.00e-03
+Epoch  20/50 | Train Loss: 0.0296 | Val Loss: 0.0217 | RMSE: 13.94 | Over-Rate: 16.32% | LR: 1.00e-03 *
+Epoch  21/50 | Train Loss: 0.0279 | Val Loss: 0.0190 | RMSE: 16.30 | Over-Rate: 8.60% | LR: 1.00e-03 *
+Epoch  22/50 | Train Loss: 0.0272 | Val Loss: 0.0171 | RMSE: 14.93 | Over-Rate: 14.32% | LR: 1.00e-03 *
+Epoch  23/50 | Train Loss: 0.0265 | Val Loss: 0.0186 | RMSE: 10.48 | Over-Rate: 22.95% | LR: 1.00e-03
+Epoch  24/50 | Train Loss: 0.0262 | Val Loss: 0.0189 | RMSE: 15.71 | Over-Rate: 11.62% | LR: 1.00e-03
+Epoch  25/50 | Train Loss: 0.0259 | Val Loss: 0.0218 | RMSE: 13.55 | Over-Rate: 17.73% | LR: 1.00e-03
+Epoch  26/50 | Train Loss: 0.0244 | Val Loss: 0.0145 | RMSE: 13.58 | Over-Rate: 18.49% | LR: 1.00e-03 *
+Epoch  27/50 | Train Loss: 0.0234 | Val Loss: 0.0187 | RMSE: 11.36 | Over-Rate: 20.33% | LR: 1.00e-03
+Epoch  28/50 | Train Loss: 0.0224 | Val Loss: 0.0162 | RMSE: 14.63 | Over-Rate: 8.88% | LR: 1.00e-03
+Epoch  29/50 | Train Loss: 0.0222 | Val Loss: 0.0160 | RMSE: 14.82 | Over-Rate: 9.30% | LR: 1.00e-03
+Epoch  30/50 | Train Loss: 0.0210 | Val Loss: 0.0145 | RMSE: 12.97 | Over-Rate: 12.97% | LR: 1.00e-03 *
+Epoch  31/50 | Train Loss: 0.0218 | Val Loss: 0.0142 | RMSE: 10.45 | Over-Rate: 17.76% | LR: 1.00e-03 *
+Epoch  32/50 | Train Loss: 0.0205 | Val Loss: 0.0139 | RMSE: 10.66 | Over-Rate: 17.71% | LR: 1.00e-03 *
+Epoch  33/50 | Train Loss: 0.0208 | Val Loss: 0.0152 | RMSE: 13.11 | Over-Rate: 13.42% | LR: 1.00e-03
+Epoch  34/50 | Train Loss: 0.0202 | Val Loss: 0.0121 | RMSE: 10.95 | Over-Rate: 13.36% | LR: 1.00e-03 *
+Epoch  35/50 | Train Loss: 0.0192 | Val Loss: 0.0118 | RMSE: 12.05 | Over-Rate: 12.46% | LR: 1.00e-03 *
+Epoch  36/50 | Train Loss: 0.0188 | Val Loss: 0.0105 | RMSE: 11.73 | Over-Rate: 9.16% | LR: 1.00e-03 *
+Epoch  37/50 | Train Loss: 0.0181 | Val Loss: 0.0144 | RMSE: 9.21 | Over-Rate: 21.37% | LR: 1.00e-03
+Epoch  38/50 | Train Loss: 0.0183 | Val Loss: 0.0106 | RMSE: 11.59 | Over-Rate: 10.15% | LR: 1.00e-03
+Epoch  39/50 | Train Loss: 0.0186 | Val Loss: 0.0102 | RMSE: 10.42 | Over-Rate: 13.11% | LR: 1.00e-03 *
+Epoch  40/50 | Train Loss: 0.0165 | Val Loss: 0.0102 | RMSE: 9.43 | Over-Rate: 16.44% | LR: 1.00e-03 *
+Epoch  41/50 | Train Loss: 0.0165 | Val Loss: 0.0085 | RMSE: 9.67 | Over-Rate: 12.66% | LR: 1.00e-03 *
+Epoch  42/50 | Train Loss: 0.0154 | Val Loss: 0.0089 | RMSE: 8.64 | Over-Rate: 26.25% | LR: 1.00e-03
+Epoch  43/50 | Train Loss: 0.0165 | Val Loss: 0.0076 | RMSE: 9.63 | Over-Rate: 10.63% | LR: 1.00e-03 *
+Epoch  44/50 | Train Loss: 0.0152 | Val Loss: 0.0104 | RMSE: 8.24 | Over-Rate: 20.69% | LR: 1.00e-03
+Epoch  45/50 | Train Loss: 0.0151 | Val Loss: 0.0082 | RMSE: 10.61 | Over-Rate: 7.67% | LR: 1.00e-03
+Epoch  46/50 | Train Loss: 0.0154 | Val Loss: 0.0084 | RMSE: 11.07 | Over-Rate: 6.15% | LR: 1.00e-03
+Epoch  47/50 | Train Loss: 0.0151 | Val Loss: 0.0089 | RMSE: 10.07 | Over-Rate: 13.93% | LR: 1.00e-03
+Epoch  48/50 | Train Loss: 0.0137 | Val Loss: 0.0067 | RMSE: 8.60 | Over-Rate: 17.68% | LR: 1.00e-03 *
+Epoch  49/50 | Train Loss: 0.0138 | Val Loss: 0.0077 | RMSE: 10.38 | Over-Rate: 7.05% | LR: 1.00e-03
+Epoch  50/50 | Train Loss: 0.0149 | Val Loss: 0.0131 | RMSE: 10.33 | Over-Rate: 11.90% | LR: 1.00e-03
+
+============================================================
+Training Complete!
+Best Validation Loss: 0.0067 at epoch 48
+Model saved to: C:\Users\Aaditya Joshi\Desktop\Fleet-availabilty\NASA-C-MAPSS_Transformer_Based_Analysis-main\outputs
+============================================================
+
+Loaded best model from epoch 48
+
+============================================================
+COMPLETE!
+============================================================

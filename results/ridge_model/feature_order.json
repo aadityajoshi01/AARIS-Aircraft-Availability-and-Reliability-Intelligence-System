@@ -1,0 +1,39 @@
+{
+  "feature_order": [
+    "op_setting_1",
+    "op_setting_2",
+    "op_setting_3",
+    "sensor_1",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_5",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_10",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_16",
+    "sensor_17",
+    "sensor_18",
+    "sensor_19",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "sequence_length": 30,
+  "max_rul": 125,
+  "target_convention": "y normalized by MAX_RUL, clipped to [0,1] on inference",
+  "train_split": "train_FD001 windows, 80/20 split random_state=42 (model saw only train half)",
+  "ridge_alpha": 10.0,
+  "input_shape": [
+    null,
+    720
+  ],
+  "expected_test_rmse_uncapped": 16.22,
+  "expected_test_rmse_capped_truth": 14.88
+}
