@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# AARIS — what stays out of git
+#
+# Rule of thumb: the repository holds source, the frozen edge model, small
+# JSON/log evidence and the screenshots. Everything that is either public
+# (the NASA dataset), regenerable (training runs, plots, checkpoints) or
+# local state (SQLite DB, venv, logs) is ignored.
+# ---------------------------------------------------------------------------
+
+# --- local environment -----------------------------------------------------
+.venv/
+venv/
+env/
+.env                        # real secrets; .env.example is the tracked template
+*.local
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+notebook6c46117e1e.ipynb
+
+# --- runtime state ---------------------------------------------------------
+# SQLite ground station DB + every backup the demo tooling has made.
+# Regenerate with: powershell -File demo\run_demo.ps1 -Reset
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.bak
+*.bak_*
+
+# --- public source data (44 MB, not ours to redistribute) ------------------
+# NASA C-MAPSS FD001: https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6
+# Unzip into Dataset/ — the file layout is described in Dataset/readme.txt.
+Dataset/
+
+# --- regenerable training artefacts ---------------------------------------
+# Transformer checkpoints (~6.6 MB each) and the backup copy of the plot set.
+*.pt
+outputs_backup/
+# Full experiment runs (428 MB of per-seed CSVs, curves and intermediate
+# windows). Re-run with experiments/*.py; the small JSON summaries in
+# results/ are tracked and are what docs/ cites.
+results/engine_split/
+results/frozen_baseline_2026-10-11/
+results/targeted/
+results/seed_43/
+results/seed_44/
+results/run_seed42_main/
+
+# --- OS / editor -----------------------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/

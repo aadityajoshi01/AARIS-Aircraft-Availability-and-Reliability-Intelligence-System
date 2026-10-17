@@ -1,0 +1,9 @@
+# Streamlit settings for the AARIS dashboard.
+# Loaded because the dashboard is always started from the repo root
+# (start.bat, demo/run_demo.ps1, and the documented manual command).
+
+[client]
+# "minimal" hides Streamlit's built-in toolbar chrome — including the
+# "Deploy" button and its "Deploy this app using..." hosting dialog,
+# which is irrelevant (and confusing in a demo) for a local-only app.
+toolbarMode = "minimal"
