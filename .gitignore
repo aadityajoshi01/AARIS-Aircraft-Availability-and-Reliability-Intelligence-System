@@ -13,6 +13,7 @@ venv/
 env/
 .env                        # real secrets; .env.example is the tracked template
 *.local
+.vercel/                    # Vercel CLI link + deploy state (holds no secrets, but is machine-local)
 
 # --- Python ---------------------------------------------------------------
 __pycache__/

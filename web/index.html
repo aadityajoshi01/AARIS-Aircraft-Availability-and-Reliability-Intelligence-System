@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AARIS — Aircraft Availability &amp; Reliability Intelligence System</title>
+<meta name="description" content="Interactive demo snapshot of AARIS: onboard RUL prediction, cross-conformal uncertainty, per-aircraft health reporting and a CP-SAT maintenance schedule for a 90-aircraft synthetic fleet.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1117'/%3E%3Cpath d='M6 22 L16 8 L26 22 L20.5 22 L16 15 L11.5 22 Z' fill='%23e8eaed'/%3E%3Ccircle cx='16' cy='25' r='2' fill='%23f0883e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="7" fill="#161b22"/><path d="M6 22 L16 8 L26 22 L20.5 22 L16 15 L11.5 22 Z" fill="#e6edf3"/><circle cx="16" cy="25" r="2" fill="#f0883e"/></svg>
+    </span>
+    <span class="brandtext">
+      <strong>AARIS</strong>
+      <small>Aircraft Availability &amp; Reliability Intelligence System</small>
+    </span>
+  </div>
+  <div class="snapshot" id="snapshot-badge" title="Data captured from the local ground station">loading snapshot…</div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Sections">
+  <button class="tab is-active" data-section="readiness">Fleet Readiness</button>
+  <button class="tab" data-section="models">Aircraft Models</button>
+  <button class="tab" data-section="detail">Aircraft Detail</button>
+  <button class="tab" data-section="plan">Maintenance Plan</button>
+  <button class="tab" data-section="about">About &amp; Evidence</button>
+</nav>
+
+<div class="banner" id="synthetic-banner" hidden>
+  <strong>Synthetic demonstration fleet.</strong> Every aircraft identity, base,
+  maintenance date and issue log on this page is fictional demo data generated from a
+  fixed seed. No real air force maintenance records, tail numbers, sortie data, defect
+  reports or classified information is used, referenced or implied. Predictions come from
+  NASA's public C-MAPSS FD001 dataset.
+</div>
+
+<main id="view">
+  <section id="s-readiness" class="panel"></section>
+  <section id="s-models" class="panel" hidden></section>
+  <section id="s-detail" class="panel" hidden></section>
+  <section id="s-plan" class="panel" hidden></section>
+  <section id="s-about" class="panel" hidden></section>
+</main>
+
+<footer class="foot">
+  <div>
+    <strong>AARIS</strong> — edge RUL inference, per-aircraft health reporting and
+    constraint-based maintenance scheduling. Built on NASA C-MAPSS FD001 with synthetic
+    fleet identities.
+  </div>
+  <div class="footlinks">
+    <a href="https://github.com/aadityajoshi01/AARIS-Aircraft-Availability-and-Reliability-Intelligence-System" target="_blank" rel="noopener">Source repository</a>
+    <a href="https://github.com/aadityajoshi01/AARIS-Aircraft-Availability-and-Reliability-Intelligence-System/blob/main/docs/PROJECT_REPORT.md" target="_blank" rel="noopener">Project report</a>
+    <a href="https://github.com/aadityajoshi01/AARIS-Aircraft-Availability-and-Reliability-Intelligence-System/blob/main/docs/UPSTREAM_README.md" target="_blank" rel="noopener">Upstream model code (MIT)</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
