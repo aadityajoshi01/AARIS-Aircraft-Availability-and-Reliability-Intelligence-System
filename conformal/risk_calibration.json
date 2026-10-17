@@ -1,0 +1,103 @@
+{
+  "model": "Ridge(alpha=10) on flattened 30x24 MinMax windows (frozen recipe)",
+  "target_scale": "final clipped cycles: clip(pred_norm*125, 0, 125); truth = piecewise-capped RUL (<=125)",
+  "method": "cross-conformal regression: engine-wise GroupKFold cross-fit, absolute out-of-fold residuals",
+  "k_folds": 5,
+  "fold_split_seed": 42,
+  "per_fold_scaler_refit": true,
+  "n_calibration_windows": 17731,
+  "n_calibration_engines": 100,
+  "oof_rmse_cycles": 16.41,
+  "oof_mae_cycles": 13.2,
+  "residual_quantiles_abs_cycles": {
+    "median": 11.59,
+    "p75": 19.67,
+    "p90": 27.18,
+    "p95": 31.31,
+    "max": 54.73
+  },
+  "halfwidths_cycles": {
+    "80": 21.81,
+    "90": 27.19,
+    "95": 31.32
+  },
+  "empirical_coverage_oof": {
+    "80": 0.8001,
+    "90": 0.9001,
+    "95": 0.9501
+  },
+  "band_diagnostics_90": {
+    "LOW": {
+      "n_windows": 6923,
+      "mean_abs_resid_cycles": 11.28,
+      "empirical_coverage_90_clipped": 0.9676
+    },
+    "MEDIUM": {
+      "n_windows": 6314,
+      "mean_abs_resid_cycles": 18.27,
+      "empirical_coverage_90_clipped": 0.7634
+    },
+    "HIGH": {
+      "n_windows": 2213,
+      "mean_abs_resid_cycles": 12.39,
+      "empirical_coverage_90_clipped": 0.9751
+    },
+    "CRITICAL": {
+      "n_windows": 2281,
+      "mean_abs_resid_cycles": 5.75,
+      "empirical_coverage_90_clipped": 1.0
+    }
+  },
+  "grounding_diagnostics": {
+    "n_windows_point_critical": 2281,
+    "frac_90pct_upper_bound_still_ge_30": 0.5988601490574309,
+    "frac_true_below_30_among_point_critical": 0.979395002192021
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "n_holdout_engines": 20,
+      "n_holdout_windows": 3677,
+      "fold_rmse_cycles": 18.515751307977872,
+      "fold_mae_cycles": 15.254221656063283
+    },
+    {
+      "fold": 1,
+      "n_holdout_engines": 20,
+      "n_holdout_windows": 3705,
+      "fold_rmse_cycles": 15.009601830202062,
+      "fold_mae_cycles": 12.203558930855984
+    },
+    {
+      "fold": 2,
+      "n_holdout_engines": 20,
+      "n_holdout_windows": 3544,
+      "fold_rmse_cycles": 17.10224435365273,
+      "fold_mae_cycles": 13.704272327558664
+    },
+    {
+      "fold": 3,
+      "n_holdout_engines": 20,
+      "n_holdout_windows": 3491,
+      "fold_rmse_cycles": 14.859143912504157,
+      "fold_mae_cycles": 11.721973217610733
+    },
+    {
+      "fold": 4,
+      "n_holdout_engines": 20,
+      "n_holdout_windows": 3314,
+      "fold_rmse_cycles": 16.23859684717264,
+      "fold_mae_cycles": 13.036980802199954
+    }
+  ],
+  "test_set_touched": false,
+  "caveats": [
+    "cross-conformal coverage is a heuristic (needs approximate exchangeability across engine folds), not an exact finite-sample guarantee",
+    "calibrated on training engines (FD001); applies to same-distribution data only",
+    "half-widths are global; band_diagnostics_90 shows where that is conservative or thin",
+    "point-estimate risk bands (LOW>=100, MEDIUM 60-99, HIGH 30-59, CRITICAL<30) are unchanged; this adds intervals around them"
+  ],
+  "calibrated_at_utc": "2026-10-11T11:25:56Z",
+  "source_script": "experiments/conformal_ridge.py",
+  "elapsed_seconds": 15.3
+}
