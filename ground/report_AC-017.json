@@ -1,0 +1,49 @@
+{
+  "aircraft_id": "AC-017",
+  "engine_id": 1,
+  "timestamp": "2026-10-11T13:07:00Z",
+  "rul_cycles": 112.76,
+  "engine_health": 90.21,
+  "risk": "LOW",
+  "top_issues": [
+    {
+      "sensor": "sensor_4",
+      "impact_cycles": -27.45,
+      "note": "reduces predicted RUL (degradation driver)"
+    },
+    {
+      "sensor": "sensor_17",
+      "impact_cycles": -21.66,
+      "note": "reduces predicted RUL (degradation driver)"
+    },
+    {
+      "sensor": "sensor_15",
+      "impact_cycles": -20.2,
+      "note": "reduces predicted RUL (degradation driver)"
+    },
+    {
+      "sensor": "sensor_2",
+      "impact_cycles": -14.91,
+      "note": "reduces predicted RUL (degradation driver)"
+    },
+    {
+      "sensor": "op_setting_1",
+      "impact_cycles": -2.74,
+      "note": "reduces predicted RUL (degradation driver)"
+    }
+  ],
+  "recommended_action": "Routine monitoring; no action. Fly per scheduled maintenance program.",
+  "model": {
+    "name": "C-MAPSS Ridge RUL",
+    "type": "Ridge",
+    "alpha": 10.0,
+    "sequence_length": 30,
+    "feature_count": 24,
+    "max_rul": 125.0,
+    "artifact": "ridge_model.pkl"
+  },
+  "input_window_shape": [
+    30,
+    24
+  ]
+}

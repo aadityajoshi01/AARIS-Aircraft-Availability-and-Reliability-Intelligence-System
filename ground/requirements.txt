@@ -1,0 +1,8 @@
+# AARIS ground station — FastAPI service over SQLite (stdlib sqlite3, no extra DB driver).
+# Python 3.11+.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+ortools>=9.15
+PyJWT>=2.8            # ground/security.py — JWT access tokens
+python-multipart>=0.0.9  # OAuth2PasswordRequestForm (POST /auth/login)

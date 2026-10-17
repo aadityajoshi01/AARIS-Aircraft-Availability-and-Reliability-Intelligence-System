@@ -1,0 +1,552 @@
+{
+  "description": "AeroGuard fleet roster — seeds ground/fleet.db aircraft metadata at startup.",
+  "aircraft_schema": [
+    "aircraft_id",
+    "base",
+    "mission_priority",
+    "spare_available"
+  ],
+  "count": 90,
+  "fleet": [
+    {
+      "aircraft_id": "AC-001",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-002",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-003",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-004",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-005",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-006",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-007",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-008",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-009",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-010",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-011",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-012",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-013",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-014",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-015",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-016",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-017",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-018",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-019",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-020",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-021",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-022",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-023",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-024",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-025",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-026",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-027",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-028",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-029",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-030",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-031",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-032",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-033",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-034",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-035",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-036",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-037",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-038",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-039",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-040",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-041",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-042",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-043",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-044",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-045",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-046",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-047",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-048",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-049",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-050",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-051",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-052",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-053",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-054",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-055",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-056",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-057",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-058",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-059",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-060",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-061",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-062",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-063",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-064",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-065",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-066",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-067",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-068",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-069",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-070",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-071",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-072",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-073",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-074",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-075",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-076",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-077",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-078",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-079",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-080",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-081",
+      "base": "DEL",
+      "mission_priority": 1,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-082",
+      "base": "BOM",
+      "mission_priority": 2,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-083",
+      "base": "HYD",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-084",
+      "base": "BLR",
+      "mission_priority": 4,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-085",
+      "base": "CCU",
+      "mission_priority": 5,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-086",
+      "base": "GAIA",
+      "mission_priority": 1,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-087",
+      "base": "BBI",
+      "mission_priority": 2,
+      "spare_available": false
+    },
+    {
+      "aircraft_id": "AC-088",
+      "base": "ASN",
+      "mission_priority": 3,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-089",
+      "base": "TRV",
+      "mission_priority": 4,
+      "spare_available": true
+    },
+    {
+      "aircraft_id": "AC-090",
+      "base": "COK",
+      "mission_priority": 5,
+      "spare_available": false
+    }
+  ]
+}
