@@ -54,7 +54,19 @@ code, .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Conso
 }
 
 .brand { display: flex; align-items: center; gap: 0.7rem; }
-.mark { display: block; line-height: 0; }
+/* The crest is navy-on-transparent and designed for light backgrounds, so it
+   sinks into the dark topbar at small sizes. Give it a light plate rather than
+   recolouring the artwork; the About page shows it full size on the dark. */
+.mark {
+  display: block;
+  line-height: 0;
+  width: 44px;
+  height: 44px;
+  padding: 5px;
+  background: #e8ecf1;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
 .brandtext { display: flex; flex-direction: column; }
 .brandtext strong { font-size: 1.18rem; letter-spacing: 0.13em; }
 .brandtext small { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.03em; }
@@ -356,6 +368,11 @@ ul.clean li { margin: 0.2rem 0; }
 .footlinks a { text-decoration: none; }
 .footlinks a:hover { text-decoration: underline; }
 
+/* About header: the crest reads properly at this size, unlike in the topbar. */
+.about-head { display: flex; align-items: center; gap: 1.1rem; }
+.about-head .crest { width: 104px; height: 104px; flex: none; }
+.about-head h1 { margin: 0.2rem 0 0.3rem; }
+
 @media (max-width: 940px) {
   .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .g3, .g2, .kpigrid { grid-template-columns: minmax(0, 1fr); }
@@ -370,6 +387,9 @@ ul.clean li { margin: 0.2rem 0; }
   .topbar { padding: 0.7rem 0.85rem; flex-wrap: wrap; }
   .snapshot { white-space: normal; font-size: 0.66rem; }
   .brandtext small { display: none; }
+  .mark { width: 38px; height: 38px; padding: 4px; }
+  .about-head { gap: 0.8rem; }
+  .about-head .crest { width: 68px; height: 68px; }
   .tabs { padding: 0 0.85rem; }
   .foot { padding: 1.2rem 0.85rem 2.4rem; }
 }

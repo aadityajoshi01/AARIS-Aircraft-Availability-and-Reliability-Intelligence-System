@@ -633,7 +633,13 @@
   function renderAbout() {
     const totalReports = Object.values(BY_ID).reduce((n, a) => n + (a.report_count || 0), 0);
     $("#s-about").innerHTML = `
-      <h1>About &amp; Evidence</h1>
+      <div class="about-head">
+        <img class="crest" src="assets/aaris_logo.png" width="256" height="256"
+             alt="AARIS crest — wings around a roundel, ringed with the words Aircraft Availability and Reliability Intelligence System">
+        <div>
+          <h1>About &amp; Evidence</h1>
+        </div>
+      </div>
       <p class="lede">AARIS predicts how many flight cycles each engine has left, turns that into a per-aircraft
       health report on the aircraft itself, ships the report to a base station, and schedules hangar slots under
       real constraints. This page is a static, shareable view of one captured demonstration run.</p>
